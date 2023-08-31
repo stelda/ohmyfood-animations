@@ -1,1 +1,5 @@
-/.idea/
+# Editor settings
+.idea/
+
+# Node.js dependencies
+node_modules/
