@@ -1,6 +1,6 @@
 .main-container {
-  /* layout */
-  display: flex;
-  flex-direction: column;
+  @include layout(column, normal, normal);
+
+  /* dimensions and spacing */
   min-width: 320px;
 }

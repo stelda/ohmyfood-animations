@@ -1,13 +1,9 @@
 .header {
-  /* layout */
-  display: flex;
-  flex-direction: column;
+  @include layout(column, normal, normal);
 }
 
 .header__logo {
-  /* layout */
-  display: flex;
-  justify-content: center;
+  @include layout(row, center, normal);
   /* dimensions and spacing */
   padding: 30px 0;
   /* borders and background */
@@ -20,10 +16,7 @@
 }
 
 .header__location form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include layout(row, center, center);
   /* dimensions and spacing */
   height: 50px;
   gap: 17px;

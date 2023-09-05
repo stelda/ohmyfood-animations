@@ -1,10 +1,4 @@
 /*
-Font mixin
-*/
-/*
-Flexbox mixin
-*/
-/*
 Colors Variables
 */
 /*
@@ -71,15 +65,17 @@ a {
 }
 
 .header {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
 }
 
 .header__logo {
-  /* layout */
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
   /* dimensions and spacing */
   padding: 30px 0;
   /* borders and background */
@@ -132,9 +128,9 @@ a {
 }
 
 .footer {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   /* dimensions and spacing */
   width: 100%;
@@ -144,8 +140,8 @@ a {
   background-color: #353535;
 }
 .footer__logo {
-  /* layout */
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -158,9 +154,9 @@ a {
   filter: invert(1);
 }
 .footer__nav {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   /* dimensions and spacing */
   gap: 7px;
@@ -189,13 +185,16 @@ a {
   .footer__logo {
     /* layout */
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
   }
   .footer__nav ul {
     /* layout */
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-end;
     align-content: flex-end;
     /* dimensions and spacing */
     gap: 7px;
@@ -215,16 +214,18 @@ button {
 }
 
 .main-container {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  /* dimensions and spacing */
   min-width: 320px;
 }
 
 .homepage-banner {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   /* dimensions and spacing */
   padding: 30px 0;
@@ -245,18 +246,18 @@ button {
   }
 }
 .howitworks__illustration {
-  /* layout */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   /* dimensions and spacing */
   padding: 50px 0;
 }
 .howitworks__illustration div {
-  /* layout */
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   /* dimensions and spacing */
   width: 322px;
   height: 72px;
@@ -280,8 +281,8 @@ button {
   color: #9356DC;
 }
 .howitworks__illustration div .circle {
-  /* layout */
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -305,9 +306,9 @@ button {
     padding: 50px 0;
   }
   .howitworks__illustration {
-    /* layout */
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     /* dimensions and spacing */
     padding: 0 180px;
@@ -330,11 +331,11 @@ Colors Variables
   grid-gap: 30px;
 }
 .restaurants .restaurants-grid .card {
-  /* layout */
   display: flex;
-  position: relative;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
   /* colors */
   background-color: white;
   /* dimensions and spacing */
@@ -344,10 +345,10 @@ Colors Variables
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
 .restaurants .restaurants-grid .card a {
-  /* layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
   /* dimensions and spacing */
   width: 100%;
   height: 100%;
@@ -387,7 +388,6 @@ Colors Variables
   color: #008766;
 }
 .restaurants .restaurants-grid .card a .card-content {
-  /* layout */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -398,7 +398,6 @@ Colors Variables
   gap: 8px;
 }
 .restaurants .restaurants-grid .card a .card-content .card-text {
-  /* layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

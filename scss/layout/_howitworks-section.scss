@@ -1,16 +1,11 @@
 .howitworks__illustration {
-  /* layout */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include layout(column, flex-start, center);
+
   /* dimensions and spacing */
   padding: 50px 0;
 
   div {
-    /* layout */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @include layout(row, flex-start, center);
     /* dimensions and spacing */
     width: 322px;
     height: 72px;
@@ -37,10 +32,7 @@
     }
 
     .circle {
-      /* layout */
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include layout(row, center, center);
       position: relative;
       left: -12px; /* Moves the circle to the left */
       /* dimensions and spacing */
@@ -65,10 +57,7 @@
   }
 
   .howitworks__illustration {
-     /* layout */
-     display: flex;
-     flex-direction: row;
-     align-items: center;
+     @include layout(row, flex-start, center);
      /* dimensions and spacing */
      padding: 0 180px;
      gap: 15px;

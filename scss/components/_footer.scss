@@ -1,9 +1,6 @@
 
 .footer {
-  /* layout */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include layout(column, flex-start, flex-start);
   /* dimensions and spacing */
   width: 100%;
   padding: 22px 25px;
@@ -11,12 +8,8 @@
   /* borders and background */
   background-color: $dark-grey;
 
-
   &__logo {
-    /* layout */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include layout(row, center, center);
     flex-shrink: 0;
 
     img {
@@ -29,10 +22,7 @@
   }
 
   &__nav {
-    /* layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include layout(column, flex-start, flex-start);
     /* dimensions and spacing */
     gap: 7px;
 
@@ -51,10 +41,7 @@
 @media (min-width: 1024px) {
   .footer {
     /* layout */
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
+    @include layout(row-reverse, flex-start, flex-end);
     align-content: flex-end;
     /* dimensions and spacing */
     padding: 30px 25px;
@@ -62,15 +49,12 @@
 
     &__logo {
       /* layout */
-      display: flex;
-      justify-content: flex-end;
+      @include layout(row, flex-end, center);
     }
 
     &__nav ul {
       /* layout */
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
+      @include layout(row, flex-start, flex-end);
       align-content: flex-end;
       /* dimensions and spacing */
       gap: 7px;

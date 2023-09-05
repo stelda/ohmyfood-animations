@@ -12,11 +12,9 @@
     grid-gap: 30px;
 
     .card {
-      /* layout */
-      display: flex;
+      @include layout(column, flex-start, center);
       position: relative;
-      flex-direction: column;
-      align-items: center;
+
       /* colors */
       background-color: white;
       /* dimensions and spacing */
@@ -26,10 +24,8 @@
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 
       a {
-        /* layout */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include layout(column, space-between, stretch);
+
         /* dimensions and spacing */
         width: 100%;
         height: 100%;
@@ -71,22 +67,14 @@
         }
 
         .card-content {
-          /* layout */
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
+          @include layout(row, space-between, center);
           align-self: stretch;
           /* dimensions and spacing */
           padding: 15px;
           gap: 8px;
 
           .card-text {
-            /* layout */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
+            @include layout(column, space-between, flex-start);
             align-self: stretch;
             /* dimensions and spacing */
             padding: 0 15px;
