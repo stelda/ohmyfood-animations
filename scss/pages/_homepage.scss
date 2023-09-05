@@ -1,0 +1,12 @@
+.howitworks, .restaurants {
+  /* dimensions and spacing */
+  padding: 50px 15px;
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .section-title {
+    /* dimensions and spacing */
+    padding: 30px 180px;
+  }
+}

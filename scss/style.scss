@@ -1,19 +1,23 @@
-// Import abstracts files
-
+// Import abstract files
+@import 'abstract/mixins';
 
 // Import base files
 @import 'base/colors';
+@import 'base/fonts';
+@import 'base/reset';
 
 // Import components files
-
+@import 'components/header';
+@import 'components/footer';
+@import 'components/button';
+@import 'components/like-button';
+@import 'components/loader';
 
 // Import layout files
-
+@import 'layout/main-container';
+@import 'layout/homepage-banner-section';
+@import 'layout/howitworks-section';
+@import 'layout/restaurants-section';
 
 // Import pages files
-
-
-// Import themes files
-
-
-// Import vendors files
+@import 'pages/homepage';

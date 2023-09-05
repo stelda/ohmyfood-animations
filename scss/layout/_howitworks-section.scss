@@ -1,0 +1,76 @@
+.howitworks__illustration {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* dimensions and spacing */
+  padding: 50px 0;
+
+  div {
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* dimensions and spacing */
+    width: 322px;
+    height: 72px;
+    margin: 15px 15px 15px 0;
+    /* borders and background */
+    border-radius: 20px;
+    background: $grey-background;
+    /* shadow */
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    i {
+      /* dimensions and spacing */
+      margin-right: 15px;
+    }
+
+    .fa-utensils, .fa-list-ul {
+      /* color */
+      color: $grey-icon;
+    }
+
+    .fa-store {
+      /* color */
+      color: $purple;
+    }
+
+    .circle {
+      /* layout */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: -12px; /* Moves the circle to the left */
+      /* dimensions and spacing */
+      width: 24px;
+      height: 24px;
+      max-width: 24px;
+      max-height: 24px;
+      /* borders and background */
+      border-radius: 50%;
+      background-color: $purple;
+      /* color */
+      color: white;
+    }
+  }
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .howitworks {
+    /* dimensions and spacing */
+    padding: 50px 0;
+  }
+
+  .howitworks__illustration {
+     /* layout */
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     /* dimensions and spacing */
+     padding: 0 180px;
+     gap: 15px;
+  }
+}

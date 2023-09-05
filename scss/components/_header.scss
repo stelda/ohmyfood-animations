@@ -1,0 +1,60 @@
+.header {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  /* dimensions and spacing */
+  padding: 30px 0;
+  /* borders and background */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header__logo img {
+  /* dimensions and spacing */
+  max-width: 80%;
+}
+
+.header__location form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* dimensions and spacing */
+  height: 50px;
+  gap: 17px;
+  padding: 15px;
+  /* borders and background */
+  background-color: $light-grey;
+  color: $dark-grey;
+}
+
+.header__location form label {
+  height: 16px;
+}
+
+.header__location form input {
+  /* dimensions and spacing */
+  width: fit-content;
+  /* borders and background */
+  border: none;
+  background: none;
+  /* typography */
+  font-size: 18px;
+  font-weight: 300;
+  color: $dark-grey;
+  /* input field */
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  caret-color: transparent; /* hide the caret */
+}
+
+.header__location form input::placeholder {
+  color: $dark-grey;
+  opacity: 1; /* Firefox */
+}

@@ -1,0 +1,32 @@
+/*
+Fonts
+*/
+
+.section-title {
+  @include font(24px, 700);
+}
+
+.card-title {
+  @include font(18px, 700);
+}
+
+.card-subtitle {
+  @include font(17px, 300);
+}
+
+.medium {
+  @include font(16px, 500);
+}
+
+.regular {
+  @include font(16px, 400);
+}
+
+.light {
+  @include font(18px, 300);
+}
+
+.new {
+  @include font (14px, 500);
+}
+

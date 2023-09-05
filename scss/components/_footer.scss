@@ -1,0 +1,79 @@
+
+.footer {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* dimensions and spacing */
+  width: 100%;
+  padding: 22px 25px;
+  gap: 16px;
+  /* borders and background */
+  background-color: $dark-grey;
+
+
+  &__logo {
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      /* dimensions and spacing */
+      width: 138px;
+      height: 27px;
+      /* change color of logo in white */
+      filter: invert(1);
+    }
+  }
+
+  &__nav {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* dimensions and spacing */
+    gap: 7px;
+
+    a {
+      color: white;
+    }
+
+    .fa-utensils {
+      /* color */
+      color: white;
+    }
+  }
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .footer {
+    /* layout */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+    /* dimensions and spacing */
+    padding: 30px 25px;
+    gap: 16px;
+
+    &__logo {
+      /* layout */
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__nav ul {
+      /* layout */
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-end;
+      /* dimensions and spacing */
+      gap: 7px;
+    }
+  }
+}

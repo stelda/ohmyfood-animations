@@ -1,0 +1,24 @@
+.homepage-banner {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* dimensions and spacing */
+  padding: 30px 0;
+  /* background */
+  background-color: $grey-background;
+
+  * {
+    /* dimensions and spacing */
+    margin: 10px;
+    text-align: center;
+  }
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .homepage-banner .section-title {
+    /* typography */
+    font-size: 40px;
+  }
+}

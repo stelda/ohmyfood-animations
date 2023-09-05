@@ -1,0 +1,432 @@
+/*
+Font mixin
+*/
+/*
+Flexbox mixin
+*/
+/*
+Colors Variables
+*/
+/*
+Fonts
+*/
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.medium {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.regular {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.light {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.new {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+/* reset global settings */
+h1, h2, p {
+  margin-top: 0;
+}
+
+/* reset bullets */
+ul {
+  list-style-type: none;
+  margin: 0; /* remove default margin */
+  padding-left: 0; /* remove 40px default padding that comes with ul bullets */
+}
+
+/* reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  /* dimensions and spacing */
+  padding: 30px 0;
+  /* borders and background */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header__logo img {
+  /* dimensions and spacing */
+  max-width: 80%;
+}
+
+.header__location form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* dimensions and spacing */
+  height: 50px;
+  gap: 17px;
+  padding: 15px;
+  /* borders and background */
+  background-color: #EAEAEA;
+  color: #353535;
+}
+
+.header__location form label {
+  height: 16px;
+}
+
+.header__location form input {
+  /* dimensions and spacing */
+  width: fit-content;
+  /* borders and background */
+  border: none;
+  background: none;
+  /* typography */
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+  /* input field */
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  caret-color: transparent; /* hide the caret */
+}
+
+.header__location form input::placeholder {
+  color: #353535;
+  opacity: 1; /* Firefox */
+}
+
+.footer {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* dimensions and spacing */
+  width: 100%;
+  padding: 22px 25px;
+  gap: 16px;
+  /* borders and background */
+  background-color: #353535;
+}
+.footer__logo {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.footer__logo img {
+  /* dimensions and spacing */
+  width: 138px;
+  height: 27px;
+  /* change color of logo in white */
+  filter: invert(1);
+}
+.footer__nav {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* dimensions and spacing */
+  gap: 7px;
+}
+.footer__nav a {
+  color: white;
+}
+.footer__nav .fa-utensils {
+  /* color */
+  color: white;
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .footer {
+    /* layout */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+    /* dimensions and spacing */
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  .footer__logo {
+    /* layout */
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer__nav ul {
+    /* layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-end;
+    /* dimensions and spacing */
+    gap: 7px;
+  }
+}
+button {
+  /* dimensions and spacing */
+  padding: 13px 18px;
+  /* borders and background */
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  /* shadow */
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  /* color */
+  color: white;
+}
+
+.main-container {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.homepage-banner {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* dimensions and spacing */
+  padding: 30px 0;
+  /* background */
+  background-color: #F6F6F6;
+}
+.homepage-banner * {
+  /* dimensions and spacing */
+  margin: 10px;
+  text-align: center;
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .homepage-banner .section-title {
+    /* typography */
+    font-size: 40px;
+  }
+}
+.howitworks__illustration {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* dimensions and spacing */
+  padding: 50px 0;
+}
+.howitworks__illustration div {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* dimensions and spacing */
+  width: 322px;
+  height: 72px;
+  margin: 15px 15px 15px 0;
+  /* borders and background */
+  border-radius: 20px;
+  background: #F6F6F6;
+  /* shadow */
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.howitworks__illustration div i {
+  /* dimensions and spacing */
+  margin-right: 15px;
+}
+.howitworks__illustration div .fa-utensils, .howitworks__illustration div .fa-list-ul {
+  /* color */
+  color: #7E7E7E;
+}
+.howitworks__illustration div .fa-store {
+  /* color */
+  color: #9356DC;
+}
+.howitworks__illustration div .circle {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -12px; /* Moves the circle to the left */
+  /* dimensions and spacing */
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+  /* borders and background */
+  border-radius: 50%;
+  background-color: #9356DC;
+  /* color */
+  color: white;
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .howitworks {
+    /* dimensions and spacing */
+    padding: 50px 0;
+  }
+  .howitworks__illustration {
+    /* layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* dimensions and spacing */
+    padding: 0 180px;
+    gap: 15px;
+  }
+}
+/*
+Colors Variables
+*/
+.restaurants {
+  background-color: #F6F6F6;
+  /*!* ---- Large Devices (more than 1024px) ---- *!*/
+}
+.restaurants .restaurants-grid {
+  /* layout */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-self: stretch;
+  /* dimensions and spacing */
+  grid-gap: 30px;
+}
+.restaurants .restaurants-grid .card {
+  /* layout */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  /* colors */
+  background-color: white;
+  /* dimensions and spacing */
+  box-sizing: border-box;
+  /* borders and background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.restaurants .restaurants-grid .card a {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* dimensions and spacing */
+  width: 100%;
+  height: 100%;
+  padding-bottom: 15px;
+  gap: 4px;
+  /* borders and background */
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.restaurants .restaurants-grid .card a img {
+  /* layout */
+  align-self: stretch;
+  /* dimensions and spacing */
+  width: 100%;
+  height: 231px;
+  box-sizing: border-box;
+  /* borders and background */
+  border-radius: 20px 20px 0 0;
+  /* image */
+  object-fit: cover;
+}
+.restaurants .restaurants-grid .card a .new {
+  /* layout */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  flex-shrink: 0;
+  /* dimensions and spacing */
+  width: 80px;
+  padding: 5px 10px;
+  /* borders and background */
+  border-radius: 2px;
+  background-color: #99E2D0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  /* text */
+  text-align: center;
+  color: #008766;
+}
+.restaurants .restaurants-grid .card a .card-content {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  /* dimensions and spacing */
+  padding: 15px;
+  gap: 8px;
+}
+.restaurants .restaurants-grid .card a .card-content .card-text {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  /* dimensions and spacing */
+  padding: 0 15px;
+  gap: 8px;
+}
+@media (min-width: 1024px) {
+  .restaurants .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 100px;
+    padding: 0 180px;
+  }
+}
+
+.howitworks, .restaurants {
+  /* dimensions and spacing */
+  padding: 50px 15px;
+}
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .section-title {
+    /* dimensions and spacing */
+    padding: 30px 180px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
