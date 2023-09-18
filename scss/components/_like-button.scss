@@ -1,7 +1,3 @@
-.menu-content-title {
-  border: 5px solid yellow;
-}
-
 .like-button {
   position: relative;
   width: 30px;
@@ -16,12 +12,11 @@
 
   .empty {
     visibility: visible;
-    color: yellowgreen;
+    //transition: all 0.2s linear;
   }
 
   .full {
     visibility: hidden;
-    color: #89C8FA;
   }
 
   &:hover .empty {
@@ -30,7 +25,7 @@
 
   &:hover .full {
     visibility: visible;
+    animation: fillLikeButton 1s linear forwards;
   }
-
 }
 

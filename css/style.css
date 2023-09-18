@@ -22,6 +22,28 @@
     opacity: 1;
   }
 }
+@keyframes fillLikeButton {
+  0% {
+    color: #9356DC;
+    opacity: 0.3;
+    scale: 50%;
+  }
+  30% {
+    color: #9356DC;
+    opacity: 0.5;
+    scale: 70%;
+  }
+  50% {
+    color: #FF79DA;
+    opacity: 0.8;
+    scale: 90%;
+  }
+  100% {
+    color: #FF79DA;
+    opacity: 1;
+    scale: 100%;
+  }
+}
 /*
 Colors Variables
 */
@@ -286,10 +308,6 @@ button:hover {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
-.menu-content-title {
-  border: 5px solid yellow;
-}
-
 .like-button {
   position: relative;
   width: 30px;
@@ -302,17 +320,16 @@ button:hover {
 }
 .like-button .empty {
   visibility: visible;
-  color: yellowgreen;
 }
 .like-button .full {
   visibility: hidden;
-  color: #89C8FA;
 }
 .like-button:hover .empty {
   visibility: hidden;
 }
 .like-button:hover .full {
   visibility: visible;
+  animation: fillLikeButton 1s linear forwards;
 }
 
 .spinner-balls {
