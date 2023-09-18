@@ -28,6 +28,10 @@ Colors Variables
 /*
 Fonts
 */
+.like-button i {
+  font-size: 22px;
+}
+
 .section-title {
   font-size: 24px;
   font-weight: 700;
@@ -70,7 +74,7 @@ Fonts
   font-family: "Roboto", sans-serif;
 }
 
-.menu-content-title {
+.restaurant-name {
   font-size: 28px;
   font-weight: 400;
   font-family: "Shrikhand", sans-serif;
@@ -282,18 +286,33 @@ button:hover {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
-.card-content {
-  border: 5px solid deeppink;
-}
-.card-content .card-text {
-  border: 5px solid green;
+.menu-content-title {
+  border: 5px solid yellow;
 }
 
 .like-button {
-  border: 5px solid red;
+  position: relative;
+  width: 30px;
+  height: 30px;
 }
-.like-button i {
-  border: 2px solid blue;
+.like-button .empty, .like-button .full {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.like-button .empty {
+  visibility: visible;
+  color: yellowgreen;
+}
+.like-button .full {
+  visibility: hidden;
+  color: #89C8FA;
+}
+.like-button:hover .empty {
+  visibility: hidden;
+}
+.like-button:hover .full {
+  visibility: visible;
 }
 
 .spinner-balls {

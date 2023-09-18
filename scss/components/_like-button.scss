@@ -1,16 +1,36 @@
-
-.card-content {
-  border: 5px solid deeppink;
-
-    .card-text {
-        border: 5px solid green;
-    }
+.menu-content-title {
+  border: 5px solid yellow;
 }
 
 .like-button {
-  border: 5px solid red;
+  position: relative;
+  width: 30px;
+  height: 30px;
 
-  i {
-    border: 2px solid blue;
+  // superposition of icons
+  .empty, .full {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+
+  .empty {
+    visibility: visible;
+    color: yellowgreen;
+  }
+
+  .full {
+    visibility: hidden;
+    color: #89C8FA;
+  }
+
+  &:hover .empty {
+    visibility: hidden;
+  }
+
+  &:hover .full {
+    visibility: visible;
+  }
+
 }
+

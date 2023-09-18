@@ -2,6 +2,10 @@
 Fonts
 */
 
+.like-button i {
+  font-size: 22px;
+}
+
 // homepage
 .section-title {
   @include font(24px, 700);
@@ -32,7 +36,7 @@ Fonts
 }
 
 // menus
-.menu-content-title {
+.restaurant-name {
   @include font(28px, 400, "Shrikhand");
 }
 
