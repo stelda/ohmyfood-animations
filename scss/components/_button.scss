@@ -1,12 +1,23 @@
 button {
   /* dimensions and spacing */
   padding: 13px 18px;
+
   /* borders and background */
   border: none;
   border-radius: 25px;
-  background: linear-gradient(175deg, $pink 0%, $purple 100%);
+  background: linear-gradient(193deg, $purple -11.44%, $pink 123.93%);
+
   /* shadow */
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
   /* color */
   color: white;
+
+  &:hover {
+    background: linear-gradient(201deg, $purple -5.2%, $pink 110.74%);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+  }
 }
+
+
+
