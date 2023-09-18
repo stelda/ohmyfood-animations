@@ -1,4 +1,5 @@
 // Import abstract files
+@import 'abstract/keyframes';
 @import 'abstract/mixins';
 
 // Import base files
@@ -11,7 +12,7 @@
 @import 'components/footer';
 @import 'components/button';
 @import 'components/like-button';
-@import 'components/loader';
+@import 'components/spinner-balls';
 
 // Import layout files
 @import 'layout/main-container';
@@ -21,3 +22,4 @@
 
 // Import pages files
 @import 'pages/homepage';
+@import 'pages/menus';

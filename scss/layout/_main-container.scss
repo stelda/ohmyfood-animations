@@ -1,6 +1,37 @@
-.main-container {
-  @include layout(column, normal, normal);
 
-  /* dimensions and spacing */
-  min-width: 320px;
+
+body{
+  border: 5px solid red;
 }
+
+.main-container{
+  border: 5px solid green;
+}
+
+header{
+  border: 5px solid blue;
+
+  .header__logo{
+    border: 5px solid yellow;
+  }
+
+  header__location{
+    border: 5px solid orange;
+  }
+}
+
+
+
+    .homepage-banner {
+        border: 5px solid pink;
+    }
+
+    .howitworks{
+        border: 5px solid brown;
+    }
+
+    .main__restaurants{
+        border: 5px solid black;
+    }
+
+

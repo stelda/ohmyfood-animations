@@ -1,3 +1,27 @@
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+@keyframes hideSpinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showMainContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*
 Colors Variables
 */
@@ -46,9 +70,40 @@ Fonts
   font-family: "Roboto", sans-serif;
 }
 
+.menu-content-title {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.menu-section-title {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
 /* reset global settings */
-h1, h2, p {
-  margin-top: 0;
+h1, h2, h3, p {
+  margin: 0;
 }
 
 /* reset bullets */
@@ -64,30 +119,34 @@ a {
   color: inherit;
 }
 
-.header {
+header {
   display: flex;
   flex-direction: column;
   justify-content: normal;
-  align-items: normal;
+  align-items: stretch;
+  width: 100%;
 }
-
-.header__logo {
+header .header__logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: normal;
+  align-items: center;
   /* dimensions and spacing */
-  padding: 30px 0;
+  padding: 15px 0;
   /* borders and background */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-
-.header__logo img {
-  /* dimensions and spacing */
-  max-width: 80%;
+header .pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-.header__location form {
+header .header__logo img {
+  /* dimensions and spacing */
+  max-width: 50%;
+}
+header .header__location form {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -95,19 +154,16 @@ a {
   /* dimensions and spacing */
   height: 50px;
   gap: 17px;
-  padding: 15px;
   /* borders and background */
   background-color: #EAEAEA;
   color: #353535;
 }
-
-.header__location form label {
+header .header__location form label {
   height: 16px;
 }
-
-.header__location form input {
+header .header__location form input {
   /* dimensions and spacing */
-  width: fit-content;
+  width: 122px;
   /* borders and background */
   border: none;
   background: none;
@@ -119,41 +175,42 @@ a {
   outline: none;
   box-shadow: none;
   appearance: none;
-  caret-color: transparent; /* hide the caret */
+  caret-color: transparent;
 }
-
-.header__location form input::placeholder {
+header .header__location form input ::placeholder {
   color: #353535;
   opacity: 1; /* Firefox */
 }
+header a {
+  position: absolute;
+  left: 30px;
+}
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   /* dimensions and spacing */
-  width: 100%;
   padding: 22px 25px;
   gap: 16px;
   /* borders and background */
   background-color: #353535;
 }
-.footer__logo {
+footer .footer__logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
-.footer__logo img {
+footer .footer__logo img {
   /* dimensions and spacing */
   width: 138px;
   height: 27px;
   /* change color of logo in white */
   filter: invert(1);
 }
-.footer__nav {
+footer .footer__nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -161,17 +218,17 @@ a {
   /* dimensions and spacing */
   gap: 7px;
 }
-.footer__nav a {
+footer .footer__nav a {
   color: white;
 }
-.footer__nav .fa-utensils {
+footer .footer__nav .fa-utensils {
   /* color */
   color: white;
 }
 
 /*!* ---- Large Devices (more than 1024px) ---- *!*/
 @media (min-width: 1024px) {
-  .footer {
+  footer {
     /* layout */
     display: flex;
     flex-direction: row-reverse;
@@ -180,16 +237,24 @@ a {
     align-content: flex-end;
     /* dimensions and spacing */
     padding: 30px 25px;
-    gap: 16px;
+    gap: 100px;
   }
-  .footer__logo {
+  footer .footer__logo {
     /* layout */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
   }
-  .footer__nav ul {
+  footer .footer__nav {
+    /* layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+  }
+  footer .footer__nav ul {
     /* layout */
     display: flex;
     flex-direction: row;
@@ -197,7 +262,13 @@ a {
     align-items: flex-end;
     align-content: flex-end;
     /* dimensions and spacing */
-    gap: 7px;
+    gap: 50px;
+  }
+  footer .footer__nav .medium, footer .footer__nav .regular {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
 }
 button {
@@ -206,20 +277,123 @@ button {
   /* borders and background */
   border: none;
   border-radius: 25px;
-  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   /* shadow */
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   /* color */
   color: white;
 }
+button:hover {
+  background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
+.card-content {
+  border: 5px solid deeppink;
+}
+.card-content .card-text {
+  border: 5px solid green;
+}
+
+.like-button {
+  border: 5px solid red;
+}
+.like-button i {
+  border: 2px solid blue;
+}
+
+.spinner-balls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  transform: translate(-50%, -50%);
+  animation: hideSpinner 0s 3s forwards;
+}
+
+[class^=ball-] {
+  position: absolute;
+  display: block;
+  left: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  transition: all 0.5s;
+  animation: circleRotate 3s both infinite;
+  transform-origin: 0 300% 0;
+}
+
+.ball-1 {
+  z-index: -1;
+  background-color: #9356DC;
+  animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+}
+
+.ball-2 {
+  z-index: -2;
+  background-color: #FF79DA;
+  animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+}
+
+.ball-3 {
+  z-index: -3;
+  background-color: #99E2D0;
+  animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+}
+
+.ball-4 {
+  z-index: -4;
+  background-color: #9356DC;
+  animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+}
+
+.ball-5 {
+  z-index: -5;
+  background-color: #FF79DA;
+  animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+}
+
+.ball-6 {
+  z-index: -6;
+  background-color: #99E2D0;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+}
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: normal;
-  /* dimensions and spacing */
-  min-width: 320px;
+  opacity: 0;
+  animation: showMainContainer 1s 3s forwards;
+}
+
+body {
+  border: 5px solid red;
+}
+
+.main-container {
+  border: 5px solid green;
+}
+
+header {
+  border: 5px solid blue;
+}
+header .header__logo {
+  border: 5px solid yellow;
+}
+header header__location {
+  border: 5px solid orange;
+}
+
+.homepage-banner {
+  border: 5px solid pink;
+}
+
+.howitworks {
+  border: 5px solid brown;
+}
+
+.main__restaurants {
+  border: 5px solid black;
 }
 
 .homepage-banner {
@@ -336,13 +510,12 @@ Colors Variables
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  /* colors */
-  background-color: white;
   /* dimensions and spacing */
   box-sizing: border-box;
   /* borders and background */
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 .restaurants .restaurants-grid .card a {
   display: flex;
@@ -352,11 +525,9 @@ Colors Variables
   /* dimensions and spacing */
   width: 100%;
   height: 100%;
-  padding-bottom: 15px;
-  gap: 4px;
+  box-sizing: border-box;
   /* borders and background */
   border-radius: 20px;
-  box-sizing: border-box;
 }
 .restaurants .restaurants-grid .card a img {
   /* layout */
@@ -404,7 +575,6 @@ Colors Variables
   align-items: flex-start;
   align-self: stretch;
   /* dimensions and spacing */
-  padding: 0 15px;
   gap: 8px;
 }
 @media (min-width: 1024px) {
@@ -425,6 +595,107 @@ Colors Variables
   .section-title {
     /* dimensions and spacing */
     padding: 30px 180px;
+  }
+}
+.restaurant-banner {
+  width: 375px;
+  height: 275px;
+  object-fit: cover;
+}
+.restaurant-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -30px;
+}
+
+.menu-content {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -30px;
+  /* dimensions */
+  width: 100%;
+  padding: 40px 0;
+  gap: 40px;
+  /* borders and background */
+  border-radius: 25px 25px 0 0;
+  background-color: #F6F6F6;
+}
+.menu-content .menu-content-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.menu-content .menu-content-title .restaurant-name, .menu-content .menu-content-title .like-button {
+  display: flex;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* dimensions */
+  gap: 12px;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.course {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* dimensions */
+  width: 365px;
+  padding: 15px;
+  gap: 5px;
+  /* borders and background */
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.course .course-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+/*!* ---- Small Devices (more than 375px) ---- *!*/
+@media (min-width: 375px) {
+  .restaurant-banner {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  .restaurant-banner {
+    height: 383px;
+    object-fit: cover;
+  }
+  .menu-content {
+    /* dimensions */
+    width: 1055px;
   }
 }
 

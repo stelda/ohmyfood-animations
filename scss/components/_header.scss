@@ -1,53 +1,65 @@
-.header {
-  @include layout(column, normal, normal);
-}
 
-.header__logo {
-  @include layout(row, center, normal);
-  /* dimensions and spacing */
-  padding: 30px 0;
-  /* borders and background */
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-}
+header {
+  @include layout(column, normal, stretch);
+  width: 100%;
 
-.header__logo img {
-  /* dimensions and spacing */
-  max-width: 80%;
-}
+  .header__logo {
+    @include layout(row, center, center);
+    /* dimensions and spacing */
+    padding: 15px 0;
+    /* borders and background */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  }
 
-.header__location form {
+  .pages {
+    @include layout(row, center, center);
+  }
+  .header__logo img {
+    /* dimensions and spacing */
+    max-width: 50%;
+  }
+
+  .header__location form {
   @include layout(row, center, center);
   /* dimensions and spacing */
   height: 50px;
   gap: 17px;
-  padding: 15px;
+
   /* borders and background */
   background-color: $light-grey;
   color: $dark-grey;
+
+    label {
+      height: 16px;
+    }
+
+    input {
+      /* dimensions and spacing */
+      width: 122px;
+      /* borders and background */
+      border: none;
+      background: none;
+      /* typography */
+      font-size: 18px;
+      font-weight: 300;
+      color: $dark-grey;
+      /* input field */
+      outline: none;
+      box-shadow: none;
+      appearance: none;
+      caret-color: transparent; // hide the caret
+
+      ::placeholder {
+        color: $dark-grey;
+        opacity: 1; /* Firefox */
+      }
+    }
+  }
+
+  a {
+    position: absolute;
+    left: 30px;
+  }
 }
 
-.header__location form label {
-  height: 16px;
-}
 
-.header__location form input {
-  /* dimensions and spacing */
-  width: fit-content;
-  /* borders and background */
-  border: none;
-  background: none;
-  /* typography */
-  font-size: 18px;
-  font-weight: 300;
-  color: $dark-grey;
-  /* input field */
-  outline: none;
-  box-shadow: none;
-  appearance: none;
-  caret-color: transparent; /* hide the caret */
-}
-
-.header__location form input::placeholder {
-  color: $dark-grey;
-  opacity: 1; /* Firefox */
-}

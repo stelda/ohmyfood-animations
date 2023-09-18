@@ -1,8 +1,8 @@
 
-@mixin font($size, $weight) {
+@mixin font($size, $weight, $family: 'Roboto') {
   font-size: $size;
   font-weight: $weight;
-  font-family: 'Roboto', sans-serif;
+  font-family: $family, sans-serif;
 }
 
 @mixin layout($direction, $justify, $align-items) {

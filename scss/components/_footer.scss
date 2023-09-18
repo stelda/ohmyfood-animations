@@ -1,16 +1,14 @@
 
-.footer {
+footer {
   @include layout(column, flex-start, flex-start);
   /* dimensions and spacing */
-  width: 100%;
   padding: 22px 25px;
   gap: 16px;
   /* borders and background */
   background-color: $dark-grey;
 
-  &__logo {
+  .footer__logo {
     @include layout(row, center, center);
-    flex-shrink: 0;
 
     img {
       /* dimensions and spacing */
@@ -21,7 +19,7 @@
     }
   }
 
-  &__nav {
+  .footer__nav {
     @include layout(column, flex-start, flex-start);
     /* dimensions and spacing */
     gap: 7px;
@@ -39,25 +37,35 @@
 
 /*!* ---- Large Devices (more than 1024px) ---- *!*/
 @media (min-width: 1024px) {
-  .footer {
+  footer {
     /* layout */
     @include layout(row-reverse, flex-start, flex-end);
     align-content: flex-end;
     /* dimensions and spacing */
     padding: 30px 25px;
-    gap: 16px;
+    gap: 100px;
 
-    &__logo {
+    .footer__logo {
       /* layout */
       @include layout(row, flex-end, center);
     }
 
-    &__nav ul {
+    .footer__nav {
       /* layout */
       @include layout(row, flex-start, flex-end);
       align-content: flex-end;
-      /* dimensions and spacing */
-      gap: 7px;
+
+      ul {
+        /* layout */
+        @include layout(row, flex-start, flex-end);
+        align-content: flex-end;
+        /* dimensions and spacing */
+        gap: 50px;
+      }
+
+      .medium, .regular {
+        @include layout(row, flex-start, flex-end);
+      }
     }
   }
 }
