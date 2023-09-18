@@ -2,6 +2,8 @@
 Fonts
 */
 
+// homepage
+
 .section-title {
   @include font(24px, 700);
 }
@@ -28,5 +30,27 @@ Fonts
 
 .new {
   @include font (14px, 500);
+}
+
+// menus
+.menu-content-title {
+  @include font(28px, 400, "Shrikhand");
+}
+
+.menu-section-title {
+  @include font(16px, 300);
+  text-transform: uppercase;
+}
+
+.name {
+    @include font(18px, 500);
+}
+
+.description {
+    @include font(15px, 300);
+}
+
+.price {
+    @include font(15px, 700);
 }
 
