@@ -21,6 +21,8 @@ https://stelda.github.io/ohmyfood-animations/
   * Roboto Font : [Apache License](http://www.apache.org/licenses/).
   * Shrikhand Font : [SIL OFL License](http://scripts.sil.org/OFL) Copyright (c) 2015 Jonny Pinhorn
 
-
 * Pictures
   * [Unsplash License](https://unsplash.com/license) Jay Wennington, Louis Hansel, Toa Heftiba, Marissa Grootes
+
+* Loader
+  * Adapted from [Antoine Vallée's CodePen](https://codepen.io/Antoine-360pixel)

@@ -1,0 +1,31 @@
+// keyframes to spin balls
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+
+// keyframes to hide spinner after 3s
+@keyframes hideSpinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// keyframes to show main-container after 3s
+@keyframes showMainContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
