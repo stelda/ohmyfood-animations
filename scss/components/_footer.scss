@@ -63,9 +63,7 @@ footer {
         gap: 50px;
       }
 
-      .medium, .regular {
-        @include layout(row, flex-start, flex-end);
-      }
+
     }
   }
 }
