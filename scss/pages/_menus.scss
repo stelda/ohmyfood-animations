@@ -1,3 +1,5 @@
+/*---------- restaurant banner ----------*/
+
 .restaurant-banner {
     width: 375px;
     height: 275px;
@@ -10,9 +12,9 @@
     }
   }
 
-.menu-frame {
-    //border: 5px solid yellow;
+/*---------- menu ----------*/
 
+.menu-frame {
     @include layout(column, center, center);
     margin-bottom: -30px; // related to the menu-content top: -30px
 }
@@ -20,7 +22,6 @@
 .menu-content {
     /* layout */
     @include layout(column, center, center);
-    //border: 5px solid deeppink;
     position: relative;
     top: -30px; // related to the menu-frame margin-bottom: -30px
     /* dimensions */
@@ -31,14 +32,9 @@
     border-radius: 25px 25px 0 0;
     background-color: $grey-background;
 
-
-
     .menu-content-title {
-
-
         @include layout(row, space-between, center);
         gap: 30px;
-
 
         .restaurant-name, .like-button {
             display: flex;
@@ -46,34 +42,90 @@
     }
 }
 
+/*---------- menu sections ----------*/
+
 .menu-section {
-
-    @include layout(column, center, center);
+    @include layout(column, normal, normal);
     /* dimensions */
+    margin: 10px;
     gap: 12px;
+
+    .menu-section-header {
+        @include layout(column, normal, flex-start);
+        gap: 4px;
+
+        .underline {
+            width: 40px;
+            height: 3px;
+            background-color: $light-green;
+        }
+    }
 }
 
-.underline {
-    width: 40px;
-    height: 3px;
-    background-color: $light-green;
-}
+/*---------- menu courses ----------*/
 .course {
-    @include layout(row, space-between, flex-end);
+    @include layout(row, space-between, normal);
+    position: relative;
+    overflow: hidden;
     /* dimensions */
-    width: 365px;
-    padding: 15px;
-    gap: 5px;
+    gap: 30px;
     /* borders and background */
     border-radius: 15px;
     background: white;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
 
+    .select-button {
+        @include layout(row, center, center);
+        position: absolute;
+        visibility: hidden;
+        /* dimensions */
+        width: 15%;
+        height: 100%;
+        right: -15%;
+        /* borders and background */
+        background-color: $light-green;
+        color: white;
+        border-radius: 0 15px 15px 0;
+        transition: all 0.5s ease-in-out; // from right -15% to 0 on hover
+    }
+
     .course-details {
-        @include layout(column, flex-start, flex-start);
+        @include layout(row, space-between, flex-end);
+        /* dimensions */
+        width: 100%;
+        padding: 15px;
         gap: 5px;
+        transition: all 0.5s ease-in-out; // from width 100% to 85% on hover
+
+        &:hover {
+            width: 80%;
+        }
+
+        &:hover + .select-button {
+            right: 0;
+            visibility: visible;
+
+            i {
+                animation: checkRotate 0.5s linear forwards;
+            }
+        }
+
+        .course-description {
+            @include layout(column, flex-start, flex-start);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
     }
 }
+
+
+
+
+
+
 
 /*!* ---- Small Devices (more than 375px) ---- *!*/
 @media (min-width: 375px) {
@@ -93,5 +145,14 @@
     .menu-content {
         /* dimensions */
         width: 1055px;
+
+        .course {
+            /* dimensions */
+            width: 634px;
+            height: 69px;
+
+
+        }
+
     }
 }

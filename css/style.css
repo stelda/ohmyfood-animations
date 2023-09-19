@@ -26,15 +26,13 @@
   0% {
     color: #9356DC;
     opacity: 0.3;
-    scale: 50%;
-  }
-  30% {
-    color: #9356DC;
-    opacity: 0.5;
     scale: 70%;
   }
   50% {
-    color: #FF79DA;
+    opacity: 0.6;
+    scale: 80%;
+  }
+  90% {
     opacity: 0.8;
     scale: 90%;
   }
@@ -42,6 +40,14 @@
     color: #FF79DA;
     opacity: 1;
     scale: 100%;
+  }
+}
+@keyframes checkRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /*
@@ -329,7 +335,7 @@ button:hover {
 }
 .like-button:hover .full {
   visibility: visible;
-  animation: fillLikeButton 1s linear forwards;
+  animation: fillLikeButton 0.3s linear forwards;
 }
 
 .spinner-balls {
@@ -627,6 +633,7 @@ Colors Variables
     padding: 30px 180px;
   }
 }
+/*---------- restaurant banner ----------*/
 .restaurant-banner {
   width: 375px;
   height: 275px;
@@ -638,6 +645,7 @@ Colors Variables
   object-fit: cover;
 }
 
+/*---------- menu ----------*/
 .menu-frame {
   display: flex;
   flex-direction: column;
@@ -673,41 +681,90 @@ Colors Variables
   display: flex;
 }
 
+/*---------- menu sections ----------*/
 .menu-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: normal;
+  align-items: normal;
   /* dimensions */
+  margin: 10px;
   gap: 12px;
 }
-
-.underline {
+.menu-section .menu-section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: flex-start;
+  gap: 4px;
+}
+.menu-section .menu-section-header .underline {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
 }
 
+/*---------- menu courses ----------*/
 .course {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: normal;
+  position: relative;
+  overflow: hidden;
   /* dimensions */
-  width: 365px;
-  padding: 15px;
-  gap: 5px;
+  gap: 30px;
   /* borders and background */
   border-radius: 15px;
   background: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
+.course .select-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  visibility: hidden;
+  /* dimensions */
+  width: 15%;
+  height: 100%;
+  right: -15%;
+  /* borders and background */
+  background-color: #99E2D0;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  transition: all 0.5s ease-in-out;
+}
 .course .course-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* dimensions */
+  width: 100%;
+  padding: 15px;
+  gap: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.course .course-details:hover {
+  width: 80%;
+}
+.course .course-details:hover + .select-button {
+  right: 0;
+  visibility: visible;
+}
+.course .course-details:hover + .select-button i {
+  animation: checkRotate 0.5s linear forwards;
+}
+.course .course-details .course-description {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*!* ---- Small Devices (more than 375px) ---- *!*/
@@ -726,6 +783,11 @@ Colors Variables
   .menu-content {
     /* dimensions */
     width: 1055px;
+  }
+  .menu-content .course {
+    /* dimensions */
+    width: 634px;
+    height: 69px;
   }
 }
 
