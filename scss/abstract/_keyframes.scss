@@ -36,15 +36,13 @@ $pink: #FF79DA;
   0% {
     color: $purple;
     opacity: 0.3;
-    scale: 50%;
-  }
-  30% {
-    color: $purple;
-    opacity: 0.5;
     scale: 70%;
   }
   50% {
-    color: $pink;
+    opacity: 0.6;
+    scale: 80%;
+  }
+  90% {
     opacity: 0.8;
     scale: 90%;
   }
