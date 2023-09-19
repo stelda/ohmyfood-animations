@@ -56,7 +56,7 @@ Colors Variables
 /*
 Fonts
 */
-.like-button i {
+.like-button i, .select-button i {
   font-size: 22px;
 }
 
@@ -402,36 +402,6 @@ button:hover {
   animation: showMainContainer 1s 3s forwards;
 }
 
-body {
-  border: 5px solid red;
-}
-
-.main-container {
-  border: 5px solid green;
-}
-
-header {
-  border: 5px solid blue;
-}
-header .header__logo {
-  border: 5px solid yellow;
-}
-header .header__location {
-  border: 5px solid orange;
-}
-
-.homepage-banner {
-  border: 5px solid pink;
-}
-
-.howitworks {
-  border: 5px solid brown;
-}
-
-.main__restaurants {
-  border: 5px solid black;
-}
-
 .homepage-banner {
   display: flex;
   flex-direction: column;
@@ -727,7 +697,7 @@ Colors Variables
   position: absolute;
   visibility: hidden;
   /* dimensions */
-  width: 15%;
+  width: 59px;
   height: 100%;
   right: -15%;
   /* borders and background */
@@ -742,13 +712,13 @@ Colors Variables
   justify-content: space-between;
   align-items: flex-end;
   /* dimensions */
-  width: 100%;
+  width: 349px;
   padding: 15px;
-  gap: 5px;
+  gap: 10px;
   transition: all 0.5s ease-in-out;
 }
 .course .course-details:hover {
-  width: 80%;
+  width: 290px;
 }
 .course .course-details:hover + .select-button {
   right: 0;
@@ -762,9 +732,16 @@ Colors Variables
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
+}
+.course .course-details .course-description .name, .course .course-details .course-description .description {
+  /* layout */
   white-space: nowrap;
   overflow: hidden;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
+  /* dimensions */
+  width: 100%;
 }
 
 /*!* ---- Small Devices (more than 375px) ---- *!*/
@@ -784,10 +761,12 @@ Colors Variables
     /* dimensions */
     width: 1055px;
   }
-  .menu-content .course {
+  .menu-content .course-details {
     /* dimensions */
     width: 634px;
-    height: 69px;
+  }
+  .menu-content .course-details:hover {
+    width: 575px;
   }
 }
 

@@ -79,7 +79,7 @@
         position: absolute;
         visibility: hidden;
         /* dimensions */
-        width: 15%;
+        width: 59px;
         height: 100%;
         right: -15%;
         /* borders and background */
@@ -92,13 +92,13 @@
     .course-details {
         @include layout(row, space-between, flex-end);
         /* dimensions */
-        width: 100%;
+        width: 349px;
         padding: 15px;
-        gap: 5px;
-        transition: all 0.5s ease-in-out; // from width 100% to 85% on hover
+        gap: 10px;
+        transition: all 0.5s ease-in-out; // from width 349px to 290px on hover
 
         &:hover {
-            width: 80%;
+            width: 290px;
         }
 
         &:hover + .select-button {
@@ -112,20 +112,20 @@
 
         .course-description {
             @include layout(column, flex-start, flex-start);
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+
+            .name, .description {
+                /* layout */
+                white-space: nowrap;
+                overflow: hidden;
+                overflow-wrap: break-word;  // marche pas
+                text-overflow: ellipsis;
+                /* dimensions */
+                width: 100%;
+            }
         }
-
-
     }
 }
-
-
-
-
-
-
 
 /*!* ---- Small Devices (more than 375px) ---- *!*/
 @media (min-width: 375px) {
@@ -146,13 +146,13 @@
         /* dimensions */
         width: 1055px;
 
-        .course {
+        .course-details {
             /* dimensions */
             width: 634px;
-            height: 69px;
 
-
+            &:hover {
+                width: 575px;
+            }
         }
-
     }
 }
