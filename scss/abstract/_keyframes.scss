@@ -31,7 +31,7 @@ $pink: #FF79DA;
   }
 }
 
-
+//keyframes to fill like button
 @keyframes fillLikeButton {
   0% {
     color: $purple;
@@ -53,12 +53,25 @@ $pink: #FF79DA;
   }
 }
 
+// keyframes to rotate check icon in select-button
 @keyframes checkRotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+// keyframes for progressive appearance of menu-sections
+@keyframes showMenuSection {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
