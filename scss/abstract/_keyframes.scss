@@ -7,7 +7,7 @@ $pink: #FF79DA;
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1440deg);
+    transform: rotate(1440deg); // 4 turns
   }
 }
 
@@ -38,18 +38,13 @@ $pink: #FF79DA;
     opacity: 0.3;
     scale: 70%;
   }
-  50% {
-    opacity: 0.6;
-    scale: 80%;
-  }
-  90% {
-    opacity: 0.8;
-    scale: 90%;
+  70% {
+    color: $purple;
   }
   100% {
     color: $pink;
     opacity: 1;
-    scale: 100%;
+    scale:100%
   }
 }
 
