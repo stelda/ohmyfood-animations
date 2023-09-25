@@ -9,11 +9,13 @@ header {
     padding: 15px 0;
     /* borders and background */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
   }
 
   .pages {
     @include layout(row, center, center);
   }
+
   .header__logo img {
     /* dimensions and spacing */
     max-width: 50%;
@@ -39,20 +41,15 @@ header {
       /* borders and background */
       border: none;
       background: none;
-      /* typography */
-      font-size: 18px;
-      font-weight: 300;
-      color: $dark-grey;
       /* input field */
       outline: none;
       box-shadow: none;
       appearance: none;
       caret-color: transparent; // hide the caret
-
-      ::placeholder {
-        color: $dark-grey;
-        opacity: 1; /* Firefox */
-      }
+      /* placeholder */
+      color: $dark-grey;
+      opacity: 1; /* Firefox */
+      -webkit-text-fill-color: $dark-grey; /* Chrome */
     }
   }
 
