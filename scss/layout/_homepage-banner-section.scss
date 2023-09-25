@@ -5,10 +5,12 @@
   /* background */
   background-color: $grey-background;
 
-  * {
-    /* dimensions and spacing */
-    margin: 10px;
+  &__text {
+    @include layout(column, center, center);
     text-align: center;
+    /* dimensions and spacing */
+    margin: 15px;
+    gap: 15px;
   }
 }
 

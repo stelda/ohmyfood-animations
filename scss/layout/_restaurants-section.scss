@@ -7,9 +7,9 @@
     /* layout */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    align-self: stretch;
     /* dimensions and spacing */
-    grid-gap: 30px;
+    grid-gap: 18px;
+    padding: 25px 0;
 
     .card {
       @include layout(column, flex-start, center);
