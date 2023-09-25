@@ -8,12 +8,11 @@ footer {
   background-color: $dark-grey;
 
   .footer__logo {
-    @include layout(row, center, center);
+    @include layout(row, normal, center);
 
     img {
       /* dimensions and spacing */
-      width: 138px;
-      height: 27px;
+      width: 50%;
       /* change color of logo in white */
       filter: invert(1);
     }
@@ -22,16 +21,24 @@ footer {
   .footer__nav {
     @include layout(column, flex-start, flex-start);
     /* dimensions and spacing */
-    gap: 7px;
+
+
+    * {
+      padding: 3px 0;
+    }
 
     a {
       color: white;
+
+      i {
+        /* dimensions and spacing */
+        width: 14px;
+
+        margin-right: 10px;
+      }
     }
 
-    .fa-utensils {
-      /* color */
-      color: white;
-    }
+
   }
 }
 
