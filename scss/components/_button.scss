@@ -1,7 +1,4 @@
 button {
-  /* dimensions and spacing */
-  padding: 13px 18px;
-
   /* borders and background */
   border: none;
   border-radius: 25px;
@@ -19,5 +16,14 @@ button {
   }
 }
 
+/*---------- homepage button ----------*/
+.homepage-banner button {
+    padding: 15px 20px;
+    margin: 15px;
+}
 
+/*---------- menu button ----------*/
+.menu-content button {
+    padding: 15px 40px;
+}
 
