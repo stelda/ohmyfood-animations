@@ -17,6 +17,7 @@
 .menu-frame {
     @include layout(column, center, center);
     margin-bottom: -30px; // related to the menu-content top: -30px
+    box-sizing: border-box;
 }
 
 .menu-content {
@@ -28,6 +29,7 @@
     width: 100%;
     padding: 40px 0;
     gap: 40px;
+    box-sizing: border-box;
     /* borders and background */
     border-radius: 25px 25px 0 0;
     background-color: $grey-background;
@@ -103,13 +105,13 @@
     .course-details {
         @include layout(row, space-between, flex-end);
         /* dimensions */
-        width: 349px;
+        width: 319px;
         padding: 15px;
         gap: 10px;
-        transition: all 0.5s ease-in-out; // from width 349px to 290px on hover
+        transition: all 0.5s ease-in-out; // from width 319px to 260px on hover
 
         &:hover {
-            width: 290px;
+            width: 260px;
         }
 
         &:hover + .select-button {
@@ -138,11 +140,31 @@
     }
 }
 
+
+/*!* ---- Extra-Small Devices (less than 375px) ---- *!*/
+@media (max-width: 374px) {
+    body {
+        width: fit-content;
+    }
+}
+
 /*!* ---- Small Devices (more than 375px) ---- *!*/
 @media (min-width: 375px) {
     .restaurant-banner {
         width: 100%;
         height: 100%;
+    }
+}
+
+/*!* ---- Medium Devices (more than 412px) ---- *!*/
+@media (min-width: 412px) {
+    .course-details {
+        /* dimensions */
+        width: 349px;
+
+        &:hover {
+            width: 290px;
+        }
     }
 }
 
