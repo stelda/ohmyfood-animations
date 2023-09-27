@@ -33,7 +33,6 @@ footer {
       i {
         /* dimensions and spacing */
         width: 14px;
-
         margin-right: 10px;
       }
     }
@@ -42,15 +41,16 @@ footer {
   }
 }
 
-/*!* ---- Large Devices (more than 1024px) ---- *!*/
-@media (min-width: 1024px) {
+
+
+
+/*!* ---- Large Devices (more than 1440px) ---- *!*/
+@media (min-width: 1440px) {
   footer {
     /* layout */
-    @include layout(row-reverse, flex-start, flex-end);
-    align-content: flex-end;
+    @include layout(row-reverse, flex-start, center);
     /* dimensions and spacing */
-    padding: 30px 25px;
-    gap: 100px;
+    padding: 50px 30px 25px 30px;
 
     .footer__logo {
       /* layout */
@@ -67,10 +67,16 @@ footer {
         @include layout(row, flex-start, flex-end);
         align-content: flex-end;
         /* dimensions and spacing */
-        gap: 50px;
+        gap: 20px;
+
+        li:nth-child(2) {
+          /* dimensions and spacing */
+          margin-right: 35px;
+        }
+
+        }
       }
 
 
     }
   }
-}

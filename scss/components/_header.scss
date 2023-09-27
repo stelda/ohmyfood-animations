@@ -1,4 +1,3 @@
-
 header {
   @include layout(column, normal, stretch);
   width: 100%;
@@ -59,4 +58,25 @@ header {
   }
 }
 
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
+  header {
+    .header__logo {
+      padding: 30px 0;
+    }
 
+    .header__logo img {
+      max-width: 30%;
+    }
+  }
+}
+
+/*!* ---- Extra Large Devices (more than 1440px) ---- *!*/
+@media (min-width: 1440px) {
+  header {
+
+    .header__logo img {
+      max-width: 15%;
+    }
+  }
+}

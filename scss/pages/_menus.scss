@@ -28,7 +28,7 @@
     /* dimensions */
     width: 100%;
     padding: 40px 0;
-    gap: 40px;
+    gap: 30px;
     box-sizing: border-box;
     /* borders and background */
     border-radius: 25px 25px 0 0;
@@ -55,12 +55,6 @@
     .menu-section-header {
         @include layout(column, normal, flex-start);
         gap: 4px;
-
-        .underline {
-            width: 40px;
-            height: 3px;
-            background-color: $light-green;
-        }
     }
 }
 
@@ -141,12 +135,7 @@
 }
 
 
-/*!* ---- Extra-Small Devices (less than 375px) ---- *!*/
-@media (max-width: 374px) {
-    body {
-        width: fit-content;
-    }
-}
+
 
 /*!* ---- Small Devices (more than 375px) ---- *!*/
 @media (min-width: 375px) {
@@ -175,6 +164,18 @@
         height: 383px;
         object-fit: cover;
     }
+    .menu-content {
+        /* dimensions */
+        width: 800px;
+    }
+}
+
+/*!* ---- Extra-Large Devices (more than 1440px) ---- *!*/
+@media (min-width: 1440px) {
+    .restaurant-banner {
+        height: 450px;
+    }
+
     .menu-content {
         /* dimensions */
         width: 1055px;
