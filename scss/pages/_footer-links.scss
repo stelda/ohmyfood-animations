@@ -1,0 +1,115 @@
+/*---------- contact ----------*/
+
+.contact-frame {
+  @include frame;
+}
+
+.contact-content {
+  @include content;
+  width: 100%;
+}
+
+.contact-content-title {
+  @include layout(row, normal, center);
+}
+
+.contact-form {
+  @include layout(column, center, center);
+
+  .contact-form-inputs .form-group {
+    @include layout(row, space-between, center);
+    gap: 50px;
+
+    input {
+      /* dimensions */
+      height: 40px;
+      padding: 0 15px;
+      margin: 15px 0;
+      /* colors */
+      color: $dark-grey;
+      opacity: 1; /* Firefox */
+      -webkit-text-fill-color: $dark-grey; /* Chrome */
+      /* borders and background */
+      border: none;
+      border-radius: 15px;
+      background: none;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
+
+      :focus {
+        outline: 2px solid $pink;
+      }
+    }
+  }
+
+  .contact-form-textarea {
+    @include layout(column, normal, normal);
+    width: 100%;
+    margin-top: 15px;
+
+    textarea {
+      /* dimensions */
+      height: 160px;
+      padding: 15px;
+      margin: 15px 0;
+      /* borders and background */
+      border: none;
+      border-radius: 15px;
+      background: none;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
+      /* colors */
+      color: $dark-grey;
+      opacity: 1; /* Firefox */
+      -webkit-text-fill-color: $dark-grey; /* Chrome */
+
+      :focus {
+          outline: 2px solid $pink;
+      }
+    }
+  }
+}
+
+/*---------- legal ----------*/
+
+.legal-frame {
+  @include frame;
+}
+
+.legal-content {
+  @include content;
+  width: 100%;
+}
+
+.legal-content-title {
+  @include layout(row, normal, center);
+}
+
+.disclosures {
+  @include layout(column, normal, normal);
+  width: 80%;
+
+  .legal-section {
+    margin: 15px 25px;
+
+    .underline {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media screen and (min-width: 1024px) {
+  .contact-content, .legal-content {
+    /* dimensions */
+    width: 800px;
+  }
+}
+
+/*!* ---- Extra-Large Devices (more than 1440px) ---- *!*/
+@media screen and (min-width: 1440px) {
+  .contact-content, .legal-content {
+    /* dimensions */
+    width: 1055px;
+  }
+}
+

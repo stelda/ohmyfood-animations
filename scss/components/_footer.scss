@@ -1,4 +1,3 @@
-
 footer {
   @include layout(column, flex-start, flex-start);
   /* dimensions and spacing */
@@ -22,7 +21,6 @@ footer {
     @include layout(column, flex-start, flex-start);
     /* dimensions and spacing */
 
-
     * {
       padding: 3px 0;
     }
@@ -36,12 +34,8 @@ footer {
         margin-right: 10px;
       }
     }
-
-
   }
 }
-
-
 
 
 /*!* ---- Large Devices (more than 1440px) ---- *!*/
@@ -73,10 +67,7 @@ footer {
           /* dimensions and spacing */
           margin-right: 35px;
         }
-
-        }
       }
-
-
     }
   }
+}

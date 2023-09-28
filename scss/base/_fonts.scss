@@ -40,7 +40,7 @@ Fonts
   @include font(28px, 400, "Shrikhand");
 }
 
-.menu-section-title {
+.menu-section-title, .contact-label, .legal-title {
   @include font(16px, 300);
   text-transform: uppercase;
 }
@@ -57,3 +57,11 @@ Fonts
     @include font(15px, 700);
 }
 
+// footer-links
+.contact-page-name, .legal-page-name {
+    @include font(28px, 400, "Shrikhand");
+}
+
+.contact-form input, #message, .legal li, .legal p {
+    @include font(16px, normal, "Times New Roman");
+}

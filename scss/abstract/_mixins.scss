@@ -12,3 +12,22 @@
   align-items: $align-items;
 }
 
+@mixin frame {
+  @include layout(column, center, center);
+  margin-bottom: -30px; // related to the menu-content top: -30px
+  box-sizing: border-box;
+}
+
+@mixin content {
+  @include layout(column, center, center);
+  position: relative;
+  top: -30px; // related to the menu-frame margin-bottom: -30px
+  /* dimensions */
+  padding: 40px 0;
+  gap: 30px;
+  box-sizing: border-box;
+  /* borders and background */
+  border-radius: 25px 25px 0 0;
+  background-color: $grey-background;
+}
+
