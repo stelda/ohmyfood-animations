@@ -79,6 +79,15 @@
     }
   }
 
+  /*!* ---- Medium Devices (more than 768px) ---- *!*/
+  @media (min-width: 768px) {
+    .restaurants-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px 20px;
+      padding: 0 20px;
+    }
+  }
+
   /*!* ---- Large Devices (more than 1024px) ---- *!*/
   @media (min-width: 1024px) {
     .restaurants-grid {
