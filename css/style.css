@@ -268,7 +268,13 @@ footer .footer__logo {
   justify-content: normal;
   align-items: center;
 }
-footer .footer__logo img {
+footer .footer__logo a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .footer__logo a img {
   /* dimensions and spacing */
   width: 50%;
   /* change color of logo in white */
@@ -306,6 +312,12 @@ footer .footer__nav a i {
   }
   footer .footer__logo {
     /* layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  footer .footer__logo a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

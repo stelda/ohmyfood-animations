@@ -9,11 +9,15 @@ footer {
   .footer__logo {
     @include layout(row, normal, center);
 
-    img {
-      /* dimensions and spacing */
-      width: 50%;
-      /* change color of logo in white */
-      filter: invert(1);
+    a {
+      @include layout(row, flex-start, center);
+
+      img {
+        /* dimensions and spacing */
+        width: 50%;
+        /* change color of logo in white */
+        filter: invert(1);
+      }
     }
   }
 
@@ -49,6 +53,10 @@ footer {
     .footer__logo {
       /* layout */
       @include layout(row, flex-end, center);
+
+      a {
+        @include layout(row, flex-end, center);
+      }
     }
 
     .footer__nav {
