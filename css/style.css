@@ -953,7 +953,7 @@ Colors Variables
   align-items: center;
   gap: 50px;
 }
-.contact-form .contact-form-inputs .form-group input {
+.contact-form input {
   /* dimensions */
   height: 40px;
   padding: 0 15px;
@@ -968,7 +968,7 @@ Colors Variables
   background: none;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
-.contact-form .contact-form-inputs .form-group input :focus {
+.contact-form input:focus {
   outline: 2px solid #FF79DA;
 }
 .contact-form .contact-form-textarea {
@@ -979,7 +979,7 @@ Colors Variables
   width: 100%;
   margin-top: 15px;
 }
-.contact-form .contact-form-textarea textarea {
+.contact-form textarea {
   /* dimensions */
   height: 160px;
   padding: 15px;
@@ -994,7 +994,7 @@ Colors Variables
   opacity: 1; /* Firefox */
   -webkit-text-fill-color: #353535; /* Chrome */
 }
-.contact-form .contact-form-textarea textarea :focus {
+.contact-form textarea:focus {
   outline: 2px solid #FF79DA;
 }
 
