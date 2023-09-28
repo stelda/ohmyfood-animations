@@ -151,6 +151,10 @@ Fonts
 }
 
 /* reset global settings */
+body {
+  margin: 0;
+}
+
 h1, h2, h3, p {
   margin: 0;
 }
@@ -791,6 +795,8 @@ Colors Variables
   justify-content: normal;
   align-items: flex-start;
   gap: 4px;
+  animation: showMenuSection 0.5s ease-in-out forwards;
+  animation-delay: 0.1s;
 }
 
 /*---------- menu courses ----------*/
@@ -810,16 +816,16 @@ Colors Variables
   animation: showMenuSection 0.5s ease-in-out forwards;
 }
 .course:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.course:nth-child(3) {
   animation-delay: 0.2s;
 }
-.course:nth-child(4) {
+.course:nth-child(3) {
   animation-delay: 0.3s;
 }
-.course:nth-child(5) {
+.course:nth-child(4) {
   animation-delay: 0.4s;
+}
+.course:nth-child(5) {
+  animation-delay: 0.5s;
 }
 .course .select-button {
   display: flex;
