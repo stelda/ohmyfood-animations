@@ -1,38 +1,11 @@
-/*---------- restaurant banner ----------*/
-
-.restaurant-banner {
-    width: 375px;
-    height: 275px;
-    object-fit: cover;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-  }
-
 /*---------- menu ----------*/
-
 .menu-frame {
-    @include layout(column, center, center);
-    margin-bottom: -30px; // related to the menu-content top: -30px
-    box-sizing: border-box;
+   @include frame;
 }
 
 .menu-content {
-    /* layout */
-    @include layout(column, center, center);
-    position: relative;
-    top: -30px; // related to the menu-frame margin-bottom: -30px
-    /* dimensions */
+    @include content;
     width: 100%;
-    padding: 40px 0;
-    gap: 30px;
-    box-sizing: border-box;
-    /* borders and background */
-    border-radius: 25px 25px 0 0;
-    background-color: $grey-background;
 
     .menu-content-title {
         @include layout(row, space-between, center);
@@ -80,6 +53,9 @@
     &:nth-child(4) {
         animation-delay: 0.3s;
     }
+    &:nth-child(5) {
+        animation-delay: 0.4s;
+    }
 
     .select-button {
         @include layout(row, center, center);
@@ -125,23 +101,11 @@
                 /* layout */
                 white-space: nowrap;
                 overflow: hidden;
-                overflow-wrap: break-word;  // marche pas
                 text-overflow: ellipsis;
                 /* dimensions */
                 width: 100%;
             }
         }
-    }
-}
-
-
-
-
-/*!* ---- Small Devices (more than 375px) ---- *!*/
-@media (min-width: 375px) {
-    .restaurant-banner {
-        width: 100%;
-        height: 100%;
     }
 }
 
@@ -159,26 +123,9 @@
 
 /*!* ---- Large Devices (more than 1024px) ---- *!*/
 @media (min-width: 1024px) {
-
-    .restaurant-banner {
-        height: 383px;
-        object-fit: cover;
-    }
     .menu-content {
         /* dimensions */
         width: 800px;
-    }
-}
-
-/*!* ---- Extra-Large Devices (more than 1440px) ---- *!*/
-@media (min-width: 1440px) {
-    .restaurant-banner {
-        height: 450px;
-    }
-
-    .menu-content {
-        /* dimensions */
-        width: 1055px;
 
         .course-details {
             /* dimensions */
@@ -188,5 +135,13 @@
                 width: 575px;
             }
         }
+    }
+}
+
+/*!* ---- Extra-Large Devices (more than 1440px) ---- *!*/
+@media (min-width: 1440px) {
+    .menu-content {
+        /* dimensions */
+        width: 1055px;
     }
 }

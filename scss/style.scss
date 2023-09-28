@@ -13,6 +13,8 @@
 @import 'components/button';
 @import 'components/like-button';
 @import 'components/spinner-balls';
+@import 'components/underline';
+@import 'components/restaurant-banner';
 
 // Import layout files
 @import 'layout/main-container';
@@ -23,3 +25,4 @@
 // Import pages files
 @import 'pages/homepage';
 @import 'pages/menus';
+@import 'pages/footer-links';
