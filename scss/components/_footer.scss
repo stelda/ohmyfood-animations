@@ -38,8 +38,8 @@ footer {
 }
 
 
-/*!* ---- Large Devices (more than 1440px) ---- *!*/
-@media (min-width: 1440px) {
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
   footer {
     /* layout */
     @include layout(row-reverse, flex-start, center);

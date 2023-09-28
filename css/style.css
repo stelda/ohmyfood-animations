@@ -289,8 +289,8 @@ footer .footer__nav a i {
   margin-right: 10px;
 }
 
-/*!* ---- Large Devices (more than 1440px) ---- *!*/
-@media (min-width: 1440px) {
+/*!* ---- Large Devices (more than 1024px) ---- *!*/
+@media (min-width: 1024px) {
   footer {
     /* layout */
     display: flex;
