@@ -36,7 +36,7 @@ $pink: #FF79DA;
   0% {
     color: $purple;
     opacity: 0.3;
-    scale: 70%;
+    transform: scale(0.7);
   }
   70% {
     color: $purple;
@@ -44,7 +44,7 @@ $pink: #FF79DA;
   100% {
     color: $pink;
     opacity: 1;
-    scale:100%
+    transform: scale(1);
   }
 }
 
