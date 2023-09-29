@@ -9,6 +9,10 @@ header {
     /* borders and background */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     z-index: 1;
+
+    a:nth-child(1) {
+      @include layout(row, center, center);
+    }
   }
 
   .pages {
@@ -17,7 +21,7 @@ header {
 
   .header__logo img {
     /* dimensions and spacing */
-    max-width: 50%;
+    width: 45%;
   }
 
   .header__location form {
@@ -51,9 +55,19 @@ header {
     }
   }
 
-  a {
+  .arrow {
     position: absolute;
     left: 30px;
+  }
+}
+
+
+/*!* ---- Medium Devices (more than 768px) ---- *!*/
+@media (min-width: 768px) {
+  header {
+    .header__logo {
+      padding: 20px 0;
+    }
   }
 }
 
@@ -62,20 +76,6 @@ header {
   header {
     .header__logo {
       padding: 30px 0;
-    }
-
-    .header__logo img {
-      max-width: 30%;
-    }
-  }
-}
-
-/*!* ---- Extra Large Devices (more than 1440px) ---- *!*/
-@media (min-width: 1440px) {
-  header {
-
-    .header__logo img {
-      max-width: 15%;
     }
   }
 }
